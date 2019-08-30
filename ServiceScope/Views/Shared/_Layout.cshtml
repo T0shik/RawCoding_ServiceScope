@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+        <a asp-controller="Home" asp-action="Index">Singleton</a>
+        <a asp-controller="Home" asp-action="Scoped">Scoped</a>
+        <a asp-controller="Home" asp-action="Transient">Transient</a>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
