@@ -6,7 +6,7 @@ namespace ServiceScope.Services
 
     public class TransientService : ITransientService
     {
-        private string _guid;
+        private readonly string _guid;
 
         public TransientService()
         {

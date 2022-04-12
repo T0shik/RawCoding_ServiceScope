@@ -6,7 +6,7 @@ namespace ServiceScope.Services
 
     public class ScopedService : IScopedService
     {
-        private string _guid;
+        private readonly string _guid;
 
         public ScopedService()
         {

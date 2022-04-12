@@ -1,13 +1,21 @@
 ﻿@model string
 
-<h1>Guid on page: @Model</h1>
+<div class="card">
+	<div class="card-header">
+		<h5>1st request to GetGuid() from Scoped service</h5>
+	</div>
+	<div class="card-body">
+		<code>@Model</code>
+	</div>
+</div>
 
 <partial name="_Scoped" />
 
-<p>
-    Useful for?
-</p>
-
-<ul>
-    <li>Persisting state throughtout application per request.</li>
-</ul>
+<div class="card">
+	<div class="card-header">
+		<h5>When to use Scoped lifetime</h5>
+	</div>
+	<ul class="list-group list-group-flush">
+		<li class="list-group-item">Persisting state through out application per request</li>
+	</ul>
+</div>
