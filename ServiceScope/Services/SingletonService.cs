@@ -6,7 +6,7 @@ namespace ServiceScope.Services
 
     public class SingletonService : ISingletonService
     {
-        private string _guid;
+        private readonly string _guid;
 
         public SingletonService()
         {

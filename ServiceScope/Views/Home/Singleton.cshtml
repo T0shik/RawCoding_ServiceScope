@@ -1,0 +1,24 @@
+﻿@model string
+
+<div class="card">
+	<div class="card-header">
+		<h5>1st request to GetGuid() from Singleton service</h5>
+	</div>
+	<div class="card-body">
+		<code>@Model</code>
+	</div>
+</div>
+
+<partial name="_Singleton" />
+
+<div class="card">
+	<div class="card-header">
+		<h5>When to use Singleton lifetime</h5>
+	</div>
+	<ul class="list-group list-group-flush">
+		<li class="list-group-item">Caching services</li>
+		<li class="list-group-item">Global configuration</li>
+		<li class="list-group-item">HttpClients <a target="_" href="https://medium.com/@@nuno.caneco/c-httpclient-should-not-be-disposed-or-should-it-45d2a8f568bc">(reason why)</a></li>
+		<li class="list-group-item">Persisting state that's useful for the runtime of the application</li>
+	</ul>
+</div>

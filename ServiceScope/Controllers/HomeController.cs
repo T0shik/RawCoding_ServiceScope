@@ -5,9 +5,9 @@ namespace ServiceScope.Controllers
 {
     public class HomeController : Controller
     {
-        private ISingletonService _singleton;
-        private IScopedService _scoped;
-        private ITransientService _transient;
+        private readonly ISingletonService _singleton;
+        private readonly IScopedService _scoped;
+        private readonly ITransientService _transient;
 
         public HomeController(
             ISingletonService singleton,
@@ -19,9 +19,10 @@ namespace ServiceScope.Controllers
             _transient = transient;
         }
 
-        public IActionResult Index()
+        [Route("/")]
+        public IActionResult Singleton()
         {
-            return View("Index", _singleton.GetGuid());
+            return View("Singleton", _singleton.GetGuid());
         }
 
         public IActionResult Scoped()

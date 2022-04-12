@@ -1,15 +1,24 @@
 ﻿@model string
 
-<h1>Guid on page: @Model</h1>
+<div class="card">
+	<div class="card-header">
+		<h5>1st request to GetGuid() from Transient service</h5>
+	</div>
+	<div class="card-body">
+		<code>@Model</code>
+	</div>
+</div>
 
 <partial name="_Transient" />
-<p>
-    Useful for?
-</p>
 
-<ul>
-    <li>Database Access</li>
-    <li>File Access</li>
-    <li>Services that should dispose of their state</li>
-    <li>When you need a fresh instance of an object every single time</li>
-</ul>
+<div class="card">
+	<div class="card-header">
+		<h5>When to use Transient lifetime</h5>
+	</div>
+    <ul class="list-group list-group-flush">
+	    <li class="list-group-item">Database connections</li>
+	    <li class="list-group-item">File handles</li>
+		<li class="list-group-item">Services that should dispose of their state</li>
+		<li class="list-group-item">When you need a fresh instance of an object each time</li>
+    </ul>
+</div>
